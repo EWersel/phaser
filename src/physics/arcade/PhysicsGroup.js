@@ -1,6 +1,6 @@
 /**
  * @author       Richard Davey <rich@photonstorm.com>
- * @copyright    2018 Photon Storm Ltd.
+ * @copyright    2019 Photon Storm Ltd.
  * @license      {@link https://github.com/photonstorm/phaser/blob/master/license.txt|MIT License}
  */
 
@@ -140,11 +140,12 @@ var PhysicsGroup = new Class({
         this.world = world;
 
         /**
-         * The class to create new group members from.
-         * This should be ArcadeImage, ArcadeSprite, or a class extending one of those.
+         * The class to create new Group members from.
+         * 
+         * This should be either `Phaser.Physics.Arcade.Image`, `Phaser.Physics.Arcade.Sprite`, or a class extending one of those.
          *
          * @name Phaser.Physics.Arcade.Group#classType
-         * @type {(Phaser.Physics.Arcade.Image|Phaser.Physics.Arcade.Sprite)}
+         * @type {GroupClassTypeConstructor}
          * @default ArcadeSprite
          */
         config.classType = GetFastValue(config, 'classType', ArcadeSprite);
